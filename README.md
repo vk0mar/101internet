@@ -1,6 +1,6 @@
-Запуск mvn clean test
+Р—Р°РїСѓСЃРє mvn clean test
 
-Лог работы в консоли.
+Р›РѕРі СЂР°Р±РѕС‚С‹ РІ РєРѕРЅСЃРѕР»Рё.
 
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.697 sec
 
