@@ -8,9 +8,11 @@ import java.util.regex.Pattern;
 public class Helper {
     public static final String itemsLink = "div.s-item-container  a.a-link-normal.s-access-detail-page.s-color-twister-title-link.a-text-normal";
     public static final String asinSelector = "div.content li:nth-child(1)";
+    public static final String asinSelectorXPath = "//li[contains(.,'ASIN: ')]";
     public static final String itemDateSelector = "div.content li:nth-child(2)";
+    public static final String itemDateSelectorXPath = "//li[contains(.,'Date first available at Amazon.com.au:')]";
     public static ArrayList<String> pageList = new ArrayList<String>();
-    public static final char umlayt ='Ö';
+    public static final String umlayt ="Ö";
     public static final String delim = "/dp/";
 
 

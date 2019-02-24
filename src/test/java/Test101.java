@@ -51,12 +51,18 @@ public class Test101 {
 
         //e_asin - из карточки товара
         driver.get(href);
-        WebElement e_asin = driver.findElement(By.cssSelector(Helper.asinSelector));
-        Assert.assertEquals(asin, e_asin.getText().substring(6, 16));
+        //WebElement e_asin = driver.findElement(By.cssSelector(Helper.asinSelector));
+        WebElement e_asin_xpath = driver.findElement(By.xpath(Helper.asinSelectorXPath));
+        System.out.println(e_asin_xpath.getText());
+
+        Assert.assertEquals(asin, e_asin_xpath.getText().substring(6, 16));
 
         // e_date - дата товара
         WebElement e_date = driver.findElement(By.cssSelector(Helper.itemDateSelector));
-        Date dateContent = new Date(e_date.getText().substring(e_date.getText().indexOf(':') + 2));
+        WebElement e_date_xpath = driver.findElement(By.xpath(Helper.itemDateSelectorXPath));
+        System.out.println(e_date_xpath.getText());
+        Date dateContent = new Date(e_date_xpath.getText().substring(e_date_xpath.getText().indexOf(':') + 2));
+
         Assert.assertTrue(dateContent.getTime() < (new Date()).getTime());
 
         //3. Страница не содержит умляут Ö.
